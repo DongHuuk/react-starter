@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 // import Info from "./Info";
-import Counter from "./Counter";
+import Average from "./Average";
 
 const App = () => {
   // const [visiable, setVisiable] = useState(false);
@@ -14,7 +14,20 @@ const App = () => {
   //   </div>
   // );
 
-  return <Counter />;
+  const refParents = useRef(null);
+
+  return (
+    <div>
+      <Average ref={refParents} />;
+      <button
+        onClick={() => {
+          refParents.f1();
+        }}
+      >
+        test
+      </button>
+    </div>
+  );
 };
 
 export default App;
