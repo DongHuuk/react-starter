@@ -1,5 +1,6 @@
 import React from 'react';
-// import CounterState from './CounterState';
+import Average from './Average';
+import MyComponentRef from './MyComponentRef';
 import Info from './Info';
 
 const App = () => {
