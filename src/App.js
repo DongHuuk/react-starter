@@ -1,10 +1,12 @@
 import React from 'react';
-import Average from './Average';
-import MyComponentRef from './MyComponentRef';
-import Info from './Info';
+import SassComponent from './SassComponent';
 
-const App = () => {
-  return <Info />;
-};
+function App() {
+  return (
+    <div>
+      <SassComponent />
+    </div>
+  );
+}
 
 export default App;
