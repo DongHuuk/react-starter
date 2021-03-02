@@ -1,32 +1,33 @@
-import React, { useRef } from "react";
-// import Info from "./Info";
-import Average from "./Average";
+import React from 'react';
+import './App.css';
+import TodoTemplate from './components/TodoTemplate';
+import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
 
 const App = () => {
-  // const [visiable, setVisiable] = useState(false);
-
-  // return (
-  //   <div>
-  //     <button onClick={() => setVisiable(!visiable)}>
-  //       {visiable ? "숨기기" : "보이기"}
-  //     </button>
-  //     {visiable && <Info />}
-  //   </div>
-  // );
-
-  const refParents = useRef(null);
+  const array = [
+    {
+      id: 1,
+      text: '첫걸음부터 시작하는 리액트 1',
+      checked: true,
+    },
+    {
+      id: 2,
+      text: '첫걸음부터 시작하는 리액트 2',
+      checked: false,
+    },
+    {
+      id: 3,
+      text: '첫걸음부터 시작하는 리액트 3',
+      checked: false,
+    },
+  ];
 
   return (
-    <div>
-      <Average ref={refParents} />;
-      <button
-        onClick={() => {
-          refParents.f1();
-        }}
-      >
-        test
-      </button>
-    </div>
+    <TodoTemplate>
+      <TodoInsert />
+      <TodoList todos={array} />
+    </TodoTemplate>
   );
 };
 
